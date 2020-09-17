@@ -41,7 +41,7 @@ def leave():
         i+=1
         participants = int(driver.find_element_by_xpath("/html/body/div[1]/c-wiz/div[1]/div/div[5]/div[3]/div[6]/div[3]/div/div[2]/div[1]/span/span/div/div/span[2]").text)
         print(str(init_participants - participants))
-        if (init_participants - participants >= 15 or i == ((dur*60)/5)): 
+        if (init_participants - participants >= 15 or i == (((dur+15)*60)/5)): 
             driver.close()
             switch_focus()
             break
